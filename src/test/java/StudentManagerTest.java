@@ -21,8 +21,24 @@ public class StudentManagerTest {
     @Test
     public void testDisplayAll() {
         Student andy = new Student(23, "andy");
+        Student bood = new Student(25, "bood");
+        Student jame = new Student(24, "jame");
         StudentManager studentManager = new StudentManager();
         studentManager.add(andy);
+        studentManager.add(bood);
+        studentManager.add(jame);
         studentManager.displayall();
+    }
+
+    @Test
+    public void testFind() {
+        Student andy = new Student(23, "andy");
+        Student bood = new Student(25, "bood");
+        Student jame = new Student(24, "jame");
+        StudentManager studentManager = new StudentManager();
+        studentManager.add(andy);
+        studentManager.add(bood);
+        studentManager.add(jame);
+        studentManager.find("hello");
     }
 }

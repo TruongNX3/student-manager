@@ -19,10 +19,24 @@ public class StudentManager {
             System.out.println(students[0].getinfomation() + ",");
             System.out.println();
         } else {
-            System.out.println("There is " + size + " student in list ");
+            System.out.println("There is " + size + " student in list: ");
             for (int i = 0; i < size; i++) {
-                System.out.println(students[i] + "\t");
+                System.out.println(students[i].getinfomation() + "\t");
             }
+        }
+    }
+
+    public void find(String name) {
+        int j = 1;
+        if (j < size) {
+            for (int i = 0; i < size; i++) {
+                if (name.equals(students[i].getName())) {
+                    System.out.println(students[i].getinfomation());
+                }
+                j++;
+            }
+        } else {
+            System.out.println("There is not student in list");
         }
     }
 }
